@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Satisfação</title>
+</head>
+<body>
+    <h1>Pesquisa de Satisfação</h1>
+
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" name="nome_cliente" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email_cliente" required>
+            </div>
+            <br>
+            <div>
+                <label for="telefone">Telefone para Contato:</label><br>
+                <input type="tel" id="telefone" name="telefone_cliente" placeholder="(XX) XXXXX-XXXX" required>
+            </div>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Pesquisa</legend>
+            <div>
+                <p>1. Qual o seu nível de satisfação com nosso atendimento?</p>
+                <input type="radio" id="sat_muito_satisfeito" name="satisfacao_atendimento" value="muito_satisfeito" required>
+                <label for="sat_muito_satisfeito">Muito Satisfeito</label><br>
+
+                <input type="radio" id="sat_satisfeito" name="satisfacao_atendimento" value="satisfeito">
+                <label for="sat_satisfeito">Satisfeito</label><br>
+
+                <input type="radio" id="sat_neutro" name="satisfacao_atendimento" value="neutro">
+                <label for="sat_neutro">Neutro</label><br>
+
+                <input type="radio" id="sat_insatisfeito" name="satisfacao_atendimento" value="insatisfeito">
+                <label for="sat_insatisfeito">Insatisfeito</label><br>
+
+                <input type="radio" id="sat_muito_insatisfeito" name="satisfacao_atendimento" value="muito_insatisfeito">
+                <label for="sat_muito_insatisfeito">Muito Insatisfeito</label><br>
+            </div>
+            <br>
+            <div>
+                <p>2. Você recomendaria nossos serviços a um amigo ou familiar?</p>
+                <input type="radio" id="rec_sim" name="recomendaria" value="sim" required>
+                <label for="rec_sim">Sim</label><br>
+
+                <input type="radio" id="rec_nao" name="recomendaria" value="nao">
+                <label for="rec_nao">Não</label><br>
+
+                <input type="radio" id="rec_talvez" name="recomendaria" value="talvez">
+                <label for="rec_talvez">Talvez</label><br>
+            </div>
+            <br>
+            <div>
+                <label for="frequencia_uso">3. Com que frequência você utiliza nossos produtos/serviços?</label><br>
+                <select id="frequencia_uso" name="frequencia_uso" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="diariamente">Diariamente</option>
+                    <option value="semanalmente">Semanalmente</option>
+                    <option value="mensalmente">Mensalmente</option>
+                    <option value="raramente">Raramente</option>
+                    <option value="primeira_vez">É a minha primeira vez</option>
+                </select>
+            </div>
+        </fieldset>
+        <br>
+        <div>
+            <input type="checkbox" id="autoriza_compartilhamento" name="autoriza_compartilhamento" value="sim">
+            <label for="autoriza_compartilhamento">Autorizo o compartilhamento da minha resposta com terceiros, de forma anônima.</label>
+        </div>
+        <br>
+        <button type="submit">Enviar Pesquisa</button>
+    </form>
+</body>
+</html>
