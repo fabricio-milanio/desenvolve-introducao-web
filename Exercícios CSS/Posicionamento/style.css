@@ -1,0 +1,57 @@
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #1f295c;
+}
+
+.introducao {
+    background-color: #d4e0ef;
+    padding: 20px;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
+.main-content, .design-menu {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.page-wrapper {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.explanation {
+    width: 60%;
+    margin-right: 35%;
+    border-right: 1px solid #1f295c;
+    padding-right: 2%;
+    box-sizing: border-box; 
+}
+
+.design-menu {
+    position: absolute; 
+    top: 560px;
+    left: 62%;
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 30%; 
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.design-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.design-menu li {
+    margin-bottom: 10px;
+}
