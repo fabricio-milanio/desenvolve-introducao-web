@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios CSS Seletores - CSS Interno</title>
+    
+    <style>
+        a {
+            color: red;
+        }
+
+        a:hover {
+            color: lime;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 + p {
+            font-weight: bold;
+        }
+
+        .destaque {
+            font-family: Arial, sans-serif;
+        }
+
+        p.destaque {
+            font-weight: bold;
+        }
+
+        strong.destaque {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exercícios - CSS Seletores</h1>
+
+    <h2>1 - Estilizando Links</h2>
+    <p>Este é um parágrafo com o link do <a target="_blank" href="https://apps.projetodesenvolve.online/authn/login?next=https%3A%2F%2Fapps.projetodesenvolve.online%2Flearner-dashboard%2F">Projeto Desenvolve</a>. Passe o mouse sobre ele para ver o efeito.</p>
+    <p>Outro exemplo é o link para o <a target="_blank" href="https://www.google.com">Google</a>.</p>
+
+    <hr>
+
+    <h2>2 - Customizando Parágrafos</h2>
+    <p>Este é um parágrafo comum, que deve ter a fonte Arial.</p>
+    <h1>Título de Nível 1</h1>
+    <p>Este parágrafo vem logo após um h1 e, portanto, deve estar em negrito e com fonte Arial.</p>
+    <p>Este parágrafo não vem imediatamente após um h1, então terá apenas a fonte Arial.</p>
+
+    <hr>
+
+    <h2>3 - Estilizando a Classe .destaque</h2>
+    <p class="destaque">Este parágrafo tem a classe "destaque" e deve estar em negrito e com fonte Arial.</p>
+    <div>
+        <strong class="destaque">Este texto é um &lt;strong&gt; com a classe "destaque" e deve ficar em vermelho e com fonte Arial.</strong>
+    </div>
+    <span class="destaque">Este é um &lt;span&gt; com a classe "destaque" e deve ter apenas a fonte Arial.</span>
+
+</body>
+</html>
