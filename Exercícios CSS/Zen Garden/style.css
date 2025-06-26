@@ -1,12 +1,3 @@
-/* ----------------------------------
-   CSS Zen Garden - Tema: Gabinete Art Nouveau
-   Versão com Exercícios de Estilização Textual
-   ---------------------------------- */
-
-/* --- 1. Importação de Fontes e Definição de Variáveis --- */
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
-
 :root {
     --fundo-creme: #FDF8F0;
     --texto-verde-escuro: #2A3F3A;
@@ -14,11 +5,7 @@
     --destaque-teal: #006A71;
 
     --fonte-titulos: 'Playfair Display', serif;
-    --fonte-corpo: 'Lato', sans-serif; /* EXERCÍCIO 1b: Fonte sans-serif já definida */
-}
-
-
-/* --- 2. Estilos Globais e Tipografia Base --- */
+    --fonte-corpo: 'Lato', sans-serif;
 
 body {
     background-color: var(--fundo-creme);
@@ -29,7 +16,6 @@ body {
     margin: 0;
 }
 
-/* --- EXERCÍCIO 1c: Indente os parágrafos em 1em --- */
 p {
     text-indent: 1em;
 }
@@ -45,27 +31,21 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- EXERCÍCIO 2: Títulos --- */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fonte-titulos);
-    text-align: right; /* Alinhamento de todos os títulos à direita */
+    text-align: right;
 }
-/* Definição de tamanhos específicos */
-h1 { font-size: 1.8rem; } /* EXERCÍCIO 2a */
-h2 { font-size: 1.4rem; } /* EXERCÍCIO 2b */
-h3 { font-size: 1.2rem; } /* EXERCÍCIO 2c */
 
-/* --- EXERCÍCIO 4: Abreviaturas em small-caps --- */
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.2rem; }
+
 abbr {
     font-variant: small-caps;
-    text-decoration: none; /* Opcional: remove o sublinhado pontilhado padrão */
-    cursor: help; /* Opcional: mantém a dica visual de que é uma abreviatura */
+    text-decoration: none;
+    cursor: help;
 }
 
-
-/* --- 3. Layout Principal em Grid --- */
-
-/* EXERCÍCIO 1a: Tamanho fixo da página já definido pelo max-width */
 .page-wrapper {
     display: grid;
     max-width: 1400px;
@@ -83,10 +63,6 @@ abbr {
 .main { grid-area: main; }
 .sidebar { grid-area: sidebar; }
 
-
-/* --- 4. Estilização das Seções --- */
-
-/* Cabeçalho */
 .intro {
     background-color: var(--destaque-teal);
     color: var(--fundo-creme);
@@ -94,13 +70,13 @@ abbr {
     text-align: center;
     border-radius: 8px;
 }
-/* Ajustando os títulos do header para obedecer à regra geral de alinhamento */
+
 .intro h1, .intro h2 {
     color: var(--fundo-creme);
     margin: 0 auto;
     padding: 0 10px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    text-align: right; /* Forçando o alinhamento do exercício */
+    text-align: right;
 }
 .intro h2 {
     font-family: var(--fonte-corpo);
@@ -112,16 +88,13 @@ abbr {
     font-weight: bold;
 }
 
-/* --- EXERCÍCIO 3a: Alinhamento da seção de resumo --- */
 .summary {
-    text-align: right; /* Alinhado à direita para consistência */
+    text-align: right;
 }
 .summary p {
     margin-top: 20px;
 }
 
-
-/* Conteúdo Principal */
 .main {
     background-color: #fff;
     padding: 40px;
@@ -139,13 +112,10 @@ abbr {
     margin-top: 0;
 }
 
-/* --- EXERCÍCIO 3b: Espaçamento entre linhas da seção principal --- */
 .main p {
     line-height: 1.5;
 }
 
-
-/* Barra Lateral (Sidebar) */
 .sidebar {
     background-color: transparent;
 }
@@ -181,8 +151,6 @@ abbr {
     text-decoration: underline;
 }
 
-
-/* Rodapé */
 footer {
     text-align: center;
     margin-top: 20px;
@@ -195,8 +163,6 @@ footer a {
     font-weight: normal;
 }
 
-
-/* --- 5. Responsividade --- */
 @media (max-width: 1024px) {
     .page-wrapper {
         grid-template-columns: 1fr;
