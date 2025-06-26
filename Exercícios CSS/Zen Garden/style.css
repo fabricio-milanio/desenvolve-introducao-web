@@ -1,3 +1,12 @@
+/* ----------------------------------
+   CSS Zen Garden - Tema: Gabinete Art Nouveau
+   Versão com Exercícios de Estilização Textual
+   ---------------------------------- */
+
+/* --- 1. Importação de Fontes e Definição de Variáveis --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
 :root {
     --fundo-creme: #FDF8F0;
     --texto-verde-escuro: #2A3F3A;
@@ -5,8 +14,11 @@
     --destaque-teal: #006A71;
 
     --fonte-titulos: 'Playfair Display', serif;
-    --fonte-corpo: 'Lato', sans-serif;
+    --fonte-corpo: 'Lato', sans-serif; /* EXERCÍCIO 1b: Fonte sans-serif já definida */
 }
+
+
+/* --- 2. Estilos Globais e Tipografia Base --- */
 
 body {
     background-color: var(--fundo-creme);
@@ -15,6 +27,11 @@ body {
     font-size: 18px;
     line-height: 1.7;
     margin: 0;
+}
+
+/* --- EXERCÍCIO 1c: Indente os parágrafos em 1em --- */
+p {
+    text-indent: 1em;
 }
 
 a {
@@ -28,10 +45,27 @@ a:hover {
     text-decoration: underline;
 }
 
+/* --- EXERCÍCIO 2: Títulos --- */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fonte-titulos);
+    text-align: right; /* Alinhamento de todos os títulos à direita */
+}
+/* Definição de tamanhos específicos */
+h1 { font-size: 1.8rem; } /* EXERCÍCIO 2a */
+h2 { font-size: 1.4rem; } /* EXERCÍCIO 2b */
+h3 { font-size: 1.2rem; } /* EXERCÍCIO 2c */
+
+/* --- EXERCÍCIO 4: Abreviaturas em small-caps --- */
+abbr {
+    font-variant: small-caps;
+    text-decoration: none; /* Opcional: remove o sublinhado pontilhado padrão */
+    cursor: help; /* Opcional: mantém a dica visual de que é uma abreviatura */
 }
 
+
+/* --- 3. Layout Principal em Grid --- */
+
+/* EXERCÍCIO 1a: Tamanho fixo da página já definido pelo max-width */
 .page-wrapper {
     display: grid;
     max-width: 1400px;
@@ -49,6 +83,10 @@ h1, h2, h3, h4, h5, h6 {
 .main { grid-area: main; }
 .sidebar { grid-area: sidebar; }
 
+
+/* --- 4. Estilização das Seções --- */
+
+/* Cabeçalho */
 .intro {
     background-color: var(--destaque-teal);
     color: var(--fundo-creme);
@@ -56,29 +94,34 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     border-radius: 8px;
 }
-
+/* Ajustando os títulos do header para obedecer à regra geral de alinhamento */
 .intro h1, .intro h2 {
     color: var(--fundo-creme);
-    margin: 0;
+    margin: 0 auto;
+    padding: 0 10px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    text-align: right; /* Forçando o alinhamento do exercício */
 }
-
-.intro h1 {
-    font-size: 4rem;
-}
-
 .intro h2 {
     font-family: var(--fonte-corpo);
     font-style: italic;
-    font-size: 1.2rem;
     opacity: 0.9;
 }
-
 .intro a {
     color: #fff;
     font-weight: bold;
 }
 
+/* --- EXERCÍCIO 3a: Alinhamento da seção de resumo --- */
+.summary {
+    text-align: right; /* Alinhado à direita para consistência */
+}
+.summary p {
+    margin-top: 20px;
+}
+
+
+/* Conteúdo Principal */
 .main {
     background-color: #fff;
     padding: 40px;
@@ -87,21 +130,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main h3 {
-    font-size: 2.2rem;
     color: var(--destaque-cobre);
     margin-top: 2em;
     padding-bottom: 0.5em;
     border-bottom: 1px solid #eee;
 }
-
 .main h3:first-child {
     margin-top: 0;
 }
 
+/* --- EXERCÍCIO 3b: Espaçamento entre linhas da seção principal --- */
+.main p {
+    line-height: 1.5;
+}
+
+
+/* Barra Lateral (Sidebar) */
 .sidebar {
     background-color: transparent;
 }
-
 .sidebar .wrapper > div {
     background-color: #fff;
     padding: 25px;
@@ -110,19 +157,14 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 5px 25px rgba(0,0,0,0.07);
     border-left: 5px solid var(--destaque-teal);
 }
-
 .sidebar h3 {
-    font-size: 1.5rem;
-    margin-top: 0;
     color: var(--destaque-teal);
 }
-
 .sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .sidebar li {
     padding: 8px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -130,7 +172,17 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar li:last-child {
     border-bottom: none;
 }
+.sidebar a {
+    color: var(--texto-verde-escuro);
+    font-weight: normal;
+}
+.sidebar a:hover {
+    color: var(--destaque-cobre);
+    text-decoration: underline;
+}
 
+
+/* Rodapé */
 footer {
     text-align: center;
     margin-top: 20px;
@@ -138,7 +190,13 @@ footer {
     font-size: 0.9em;
     color: #777;
 }
+footer a {
+    color: var(--destaque-cobre);
+    font-weight: normal;
+}
 
+
+/* --- 5. Responsividade --- */
 @media (max-width: 1024px) {
     .page-wrapper {
         grid-template-columns: 1fr;
@@ -149,6 +207,4 @@ footer {
         padding: 20px;
         gap: 20px;
     }
-
-    .intro h1 { font-size: 3rem; }
 }
