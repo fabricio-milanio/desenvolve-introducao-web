@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios CSS - Unidade de Medida</title>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            color: #222;
+        }
+
+        h1 {
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 30px 0;
+        }
+
+        .comparacao-cores {
+            display: flex;
+            margin-top: 15px;
+            border: 1px solid #ccc;
+        }
+
+        .caixa-cor {
+            flex: 1;
+            padding: 25px 15px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+
+        .cor-original {
+            background-color: rgb(219, 78, 68);
+        }
+
+        .cor-clara {
+            background-color: rgb(224, 105, 96);
+        }
+
+        .cor-escura {
+            background-color: rgb(186, 66, 58);
+        }
+
+        @media (max-width: 600px) {
+            .comparacao-cores {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Exercício CSS - Unidade de Medida</h1>
+
+        <h2>1. Tamanhos das Fontes</h2>
+
+        <h3>Tamanho do <code>h1</code></h3>
+        <p><strong>Regra:</strong> <code>html h1 { font-size: 2rem; }</code><br>
+        <strong>Cálculo:</strong> 2 * 20px = <strong>40px</strong> ✅</p>
+
+        <h3>Tamanho do <code>.principal</code></h3>
+        <p><strong>Regra:</strong> <code>h1 > .principal { font-size: 1.4em; }</code><br>
+        <strong>Cálculo:</strong> 1.4 * 40px (tamanho do pai, o h1) = <strong>56px</strong> ✅</p>
+        
+        <h3>Tamanho do <code>.secundario</code></h3>
+        <p><strong>Regra:</strong> <code>html .secundario { font-size: 1.4rem; }</code><br>
+        <strong>Cálculo:</strong> 1.4 * 20px = <strong>28px</strong> ✅</p>
+
+        <hr>
+
+        <h2>2. Variação das Cores</h2>
+        <p>A cor original é <code>rgb(219, 78, 68)</code>. Vamos ver como ela fica 15% mais clara e 15% mais escura.</p>
+        
+        <ul>
+            <li><strong>Cor 15% mais clara:</strong> <code>rgb(224, 105, 96)</code></li>
+            <li><strong>Cor 15% mais escura:</strong> <code>rgb(186, 66, 58)</code></li>
+        </ul>
+
+        <h3>Comparando os resultados:</h3>
+        <div class="comparacao-cores">
+            <div class="caixa-cor cor-escura">
+                15% Mais Escura
+            </div>
+            <div class="caixa-cor cor-original">
+                Original
+            </div>
+            <div class="caixa-cor cor-clara">
+                15% Mais Clara
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
